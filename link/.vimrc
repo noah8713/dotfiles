@@ -162,7 +162,7 @@ set hls
 set incsearch
 set ruler
 " set nobackup
-set bdir=~/temp
+" set bdir=~/temp
 
 set t_Co=256
 " color wombat256mod
