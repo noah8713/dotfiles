@@ -3,7 +3,9 @@
 
 # Command aliases.
 Cmnd_Alias APT = /usr/bin/apt-get
+Cmnd_Alias PIP = /usr/bin/pip
+Cmnd_Alias MYPROGS = APT,PIP
 
 # Members of the sudo and admin groups can run these commands without password.
-%sudo ALL=(ALL) ALL, NOPASSWD:APT
-%admin ALL=(ALL) ALL, NOPASSWD:APT
+%sudo ALL=(ALL) ALL, NOPASSWD:MYPROGS
+%admin ALL=(ALL) ALL, NOPASSWD:MYPROGS
