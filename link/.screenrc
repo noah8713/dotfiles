@@ -1,0 +1,26 @@
+bindkey "^[OQ" screen    # F2 = new window
+bindkey "^[OR" prev      # F3 = prev
+bindkey "^[OS" next      # F4 = next
+bindkey "^[[18~" copy    # F7 = copy/scroll back mode
+
+#  screen -t irssi irssi
+
+#  bind j focus down
+#  bind k focus up
+
+#  defscrollback 2000
+defutf8 on
+
+#  caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"
+#  hardstatus string "%{+b Rk}(%{-b g}$LOGNAME@%H%{+b R}) (%{-b g}%C %a%{+b R}) %{-b g} %n %t %h"
+
+#hardstatus alwayslastline "%{+b kr}[ %H ] %{ky} Load: %l %-=%{kb} %c  %d.%m.%Y"
+##hardstatus alwayslastline "%{+b kr}[ %H ] %{kw} Load: %l %-=%  %{kb} %c:%s  %d.%m.%Y "
+
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+#  bindkey "^[Od" prev  # change window with ctrl-left
+#  bindkey "^[Oc" next  # change window with ctrl-righ
