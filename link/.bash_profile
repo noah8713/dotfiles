@@ -17,7 +17,7 @@ export VISUAL
 SVN_EDITOR=vim
 export SVN_EDITOR
 
-figlet -f smslant `hostname`
+toilet -f smslant `hostname`
 
 # Printing a calendar for the month
 # cal $(date +"%m") $(date +"%Y")
