@@ -5,12 +5,20 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 shopt -s histappend
+# Allow use to re-edit a faild history substitution.
+# shopt -s histreedit
+# History expansions will be verified before execution.
+# shopt -s histverify
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+export HISTCONTROL=ignoreboth
+# export HISTCONTROL="ignorespace:erasedups"
+
+# Give history timestamps.
+export HISTTIMEFORMAT="[%F %T] "
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -81,6 +89,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+export GREP_OPTIONS='--color=auto'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -106,9 +116,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-source ~/python-novaclient/tools/nova.bash_completion
-source ~/python-cinderclient/tools/cinder.bash_completion
-source ~/python-keystoneclient/tools/keystone.bash_completion
+if [ -f ~/python-novaclient/tools/nova.bash_completion ]; then
+    source ~/python-novaclient/tools/nova.bash_completion
+fi
+if [ -f ~/python-cinderclient/tools/cinder.bash_completion ]; then
+    source ~/python-cinderclient/tools/cinder.bash_completion
+fi
+if [ -f ~/python-keystoneclient/tools/keystone.bash_completion ]; then
+    source ~/python-keystoneclient/tools/keystone.bash_completion
+fi
 if [ -f ~/python-neutronclient/tools/neutron.bash_completion ]; then
     source ~/python-neutronclient/tools/neutron.bash_completion
 fi
