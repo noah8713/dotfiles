@@ -1,59 +1,53 @@
 [user]
-  name = Ben Alman
-  email = EMAIL
+    name = Qiu Yu
+    email = unicell@gmail.com
+[branch]
+    autosetupmerge = true
+[color]
+    ui = auto
 [core]
-  autocrlf = input
-  whitespace = fix,space-before-tab,tab-in-indent,trailing-space
-  excludesfile = ~/.gitignore_global
-[apply]
-  whitespace = fix
+    ;  autocrlf = true
+    ;  autocrlf = input
+    ;  whitespace = cr-at-eol
+    ;  whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+    ;  pager = less -+FRSX -FRX
+    ;  excludesfile = ~/.gitignore_global
 [alias]
-  br = branch
-  ci = commit
-  co = checkout
-  df = diff
-  g = grep -I
-  lg = log -p
-  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
-  rb = rbranch
-  rv = review
-  st = status
-  ksdiff = difftool -y -t Kaleidoscope
-[branch "master"]
-  remote = origin
-  merge = refs/heads/master
+    g = grep -I
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    sb = show-branch
+    lg = log --stat
+    last = log --stat -1
+    diffstat = diff --stat -r
+    changes = diff --name-status -r
+    unstage = reset HEAD --
+[merge]
+    conflictstyle = diff3
+    tool = vimdiff
+    log = true
+[pager]
+    color = true
+[status]
+    color = auto
+; [rerere]
+;    enabled = true
+;  [apply]
+    ;  whitespace = fix
 [color]
   ui = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-[merge]
-  log = true
-[difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[rerere]
-  enabled = 1
-[url "git@github.com:"]
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
-[url "git://github.com/"]
-  insteadOf = "github:"
-[url "git@gist.github.com:"]
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
-[url "git@heroku.com:"]
-  insteadOf = "heroku:"
+;  [color "branch"]
+    ;  current = yellow reverse
+    ;  local = yellow
+    ;  remote = green
+;  [color "diff"]
+    ;  meta = yellow bold
+    ;  frag = magenta bold
+    ;  old = red bold
+    ;  new = green bold
+;  [color "status"]
+    ;  added = yellow
+    ;  changed = green
+    ;  untracked = cyan
