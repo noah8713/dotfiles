@@ -33,15 +33,19 @@ fi
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update
-sudo apt-get -qq dist-upgrade
+# sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
 packages=(
-  build-essential libssl-dev
-  git-core
-  tree sl id3tool cowsay
-  nmap telnet
-  htop
+    build-essential libssl-dev
+    proxychains socat screen byobu
+    git-core stgit tig
+    vim cscope exuberant-ctags
+    python-virtualenv python-pip
+    dnsutils jnettop lrzsz
+    tree
+    figlet procinfo fortunes
+    htop dstat
 )
 
 list=()
@@ -59,10 +63,10 @@ if (( ${#list[@]} > 0 )); then
 fi
 
 # Install Git Extras
-if [[ ! "$(type -P git-extras)" ]]; then
-  e_header "Installing Git Extras"
-  (
-    cd ~/.dotfiles/libs/git-extras &&
-    sudo make install
-  )
-fi
+# if [[ ! "$(type -P git-extras)" ]]; then
+  # e_header "Installing Git Extras"
+  # (
+    # cd ~/.dotfiles/libs/git-extras &&
+    # sudo make install
+  # )
+# fi
