@@ -30,9 +30,8 @@ EOF
   fi
 fi
 
-# Update APT.
-e_header "Updating APT"
-sudo apt-get -qq update
+# APT Dist Upgrade
+# e_header "Upgrading Dist"
 # sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
