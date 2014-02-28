@@ -61,6 +61,9 @@ if (( ${#list[@]} > 0 )); then
   done
 fi
 
+# Install vundle for vim
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 # Install Git Extras
 # if [[ ! "$(type -P git-extras)" ]]; then
   # e_header "Installing Git Extras"
