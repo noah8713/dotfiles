@@ -40,7 +40,7 @@ packages=(
     proxychains socat screen byobu
     git-core stgit tig
     vim cscope exuberant-ctags
-    python-virtualenv python-pip
+    python-virtualenv python-pip python-dev
     dnsutils jnettop lrzsz
     tree
     toilet procinfo fortunes
