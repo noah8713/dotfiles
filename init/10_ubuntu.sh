@@ -43,7 +43,7 @@ packages=(
     python-virtualenv python-pip
     dnsutils jnettop lrzsz
     tree
-    figlet procinfo fortunes
+    toilet procinfo fortunes
     htop dstat
 )
 
