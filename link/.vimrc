@@ -41,7 +41,8 @@ Bundle 'pythonhelper'
 " Bundle 'snipMate'
 " The ultimate snippet solution for python enabled Vim.
 " Bundle 'UltiSnips'
-Bundle 'MarcWeber/ultisnips'
+" Bundle 'MarcWeber/ultisnips'
+Bundle 'SirVer/ultisnips'
 Bundle "honza/vim-snippets"
 " Tab-complete your Python code
 " Bundle 'Pydiction'
@@ -189,18 +190,9 @@ let g:riv_create_link_pos = '.'
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-let g:UltiSnips = {}
-let g:UltiSnips.ExpandTrigger = "<c-j>"
-let g:UltiSnips.JumpForwardTrigger = "<c-j>"
-let g:UltiSnips.JumpBackwardTrigger = "<c-k>"
-let g:UltiSnips.always_use_first_snippet = 1
-let g:UltiSnips.UltiSnips_ft_filter = {
-            \ 'default' : {'filetypes': ['all'] },
-            \ 'all' : {'filetypes': ['all'] },
-            \ }
-let g:UltiSnips.snipmate_ft_filter = {
-            \ 'default' : {'filetypes': ["FILETYPE", "_"] },
-            \ }
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " set fileencoding=gb18030
 " set fileencodings=utf-8,gb18030,utf-16,big5
