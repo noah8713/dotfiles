@@ -49,31 +49,31 @@ Bundle "honza/vim-snippets"
 Bundle 'Rykka/riv.vim'
 
 " Alternate Files quickly (.c --> .h etc)
-Bundle 'a.vim'
+" Bundle 'a.vim'
 " ansi escape sequences concealed, but highlighted as specified (conceal)
-Bundle 'AnsiEsc.vim'
+" Bundle 'AnsiEsc.vim'
 " Some utilities used by several of my scripts (window positioning, mark handling)
-Bundle 'cecutil'
+" Bundle 'cecutil'
 " a Source code Explorer which works like the context window of "Source Insight"
-Bundle 'SrcExpl'
+" Bundle 'SrcExpl'
 " A plugin that allows for easy commenting of code for many filetypes.
 " Bundle 'The-NERD-Commenter'
 
 " Color
-Bundle 'darkburn'
-Bundle 'desert.vim'
-Bundle 'desert256.vim'
-Bundle 'freya'
-Bundle 'inkpot'
-Bundle 'jellybeans.vim'
-Bundle 'Lucius'
-Bundle 'midnight2.vim'
-Bundle 'molokai'
-Bundle 'moria'
-Bundle 'oceandeep'
-Bundle 'peaksea'
-Bundle 'wombat256.vim'
-Bundle 'Zenburn'
+" Bundle 'darkburn'
+" Bundle 'desert.vim'
+" Bundle 'desert256.vim'
+" Bundle 'freya'
+" Bundle 'inkpot'
+" Bundle 'jellybeans.vim'
+" Bundle 'Lucius'
+" Bundle 'midnight2.vim'
+" Bundle 'molokai'
+" Bundle 'moria'
+" Bundle 'oceandeep'
+" Bundle 'peaksea'
+" Bundle 'wombat256.vim'
+" Bundle 'Zenburn'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on     " required!
