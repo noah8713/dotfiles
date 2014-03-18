@@ -64,6 +64,13 @@ fi
 # Install vundle for vim
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
+# Install puppet
+e_header "Installing Puppet"
+wget http://apt.puppetlabs.com/puppetlabs-release-stable.deb
+sudo dpkg -i puppetlabs-release-stable.deb
+sudo apt-get -qy update
+sudo apt-get -qy install puppet-common ruby1.9.1 libaugeas-ruby
+
 # Install Git Extras
 # if [[ ! "$(type -P git-extras)" ]]; then
   # e_header "Installing Git Extras"
