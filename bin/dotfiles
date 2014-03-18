@@ -135,9 +135,9 @@ fi
 # with recent XCode or CLT)
 if [[ ! "$(type -P git)" && "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
   e_header "Updating APT"
-  sudo apt-get -qq update
+  sudo apt-get -qy update
   e_header "Installing Git"
-  sudo apt-get -qq install git-core
+  sudo apt-get -qy install git-core
 fi
 
 # If Git isn't installed by now, something exploded. We gots to quit!
