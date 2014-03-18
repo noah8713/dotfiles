@@ -45,6 +45,7 @@ packages=(
     tree
     toilet procinfo fortunes
     htop dstat
+    ruby1.9.1 ruby1.9.1-dev
 )
 
 list=()
