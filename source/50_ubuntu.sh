@@ -31,3 +31,15 @@ function node_ver() {
     echo "Error, $(node --version) installed."
   )
 }
+
+# Install puppet
+function install_puppet() {
+    echo "Installing Puppet"
+    wget http://apt.puppetlabs.com/puppetlabs-release-stable.deb
+    sudo dpkg -i puppetlabs-release-stable.deb
+    sudo apt-get -qy update
+    sudo apt-get -qy install puppet-common ruby1.9.1 libaugeas-ruby
+
+    sudo apt-get -qy install ruby1.9.1 ruby1.9.1-dev
+    sudo gem install librarian-puppet
+}
