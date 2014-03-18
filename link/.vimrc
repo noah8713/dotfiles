@@ -48,6 +48,10 @@ Bundle "honza/vim-snippets"
 " Bundle 'Pydiction'
 " managing and writing reStructuredText Documents.
 Bundle 'Rykka/riv.vim'
+" Puppet niceties for your Vim setup
+Bundle 'rodjek/vim-puppet'
+" Syntax checking hacks for vim
+Bundle 'scrooloose/syntastic'
 
 " Alternate Files quickly (.c --> .h etc)
 " Bundle 'a.vim'
