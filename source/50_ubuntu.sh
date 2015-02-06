@@ -43,3 +43,18 @@ function install_puppet() {
     sudo apt-get -qy install ruby1.9.1 ruby1.9.1-dev
     sudo gem install librarian-puppet
 }
+
+# Install python-*client
+function install_clients() {
+    echo "Installing Clients"
+    cd ~ && virtualenv venv
+    . venv/bin/activate
+    pip install -U 'pip==1.4.1' 'distribute'
+    git clone https://github.com/openstack/python-keystoneclient.git
+    git clone https://github.com/openstack/python-novaclient.git
+    git clone https://github.com/openstack/python-glanceclient.git
+    git clone https://github.com/openstack/python-cinderclient.git
+    git clone https://github.com/openstack/python-neutronclient.git
+    # eachdir *client -- sudo python setup.py develop
+    eachdir *-keystoneclient *-novaclient -- python setup.py develop
+}

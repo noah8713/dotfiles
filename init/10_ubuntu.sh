@@ -36,7 +36,7 @@ fi
 
 # Install APT packages.
 packages=(
-    build-essential libssl-dev
+    libc6-dev build-essential libssl-dev
     proxychains socat screen byobu
     git-core stgit tig
     vim cscope exuberant-ctags

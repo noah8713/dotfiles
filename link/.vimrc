@@ -52,6 +52,8 @@ Bundle 'Rykka/riv.vim'
 Bundle 'rodjek/vim-puppet'
 " Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
+" Go
+Bundle 'fatih/vim-go'
 
 " Alternate Files quickly (.c --> .h etc)
 " Bundle 'a.vim'
