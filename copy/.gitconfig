@@ -3,8 +3,6 @@
     email = unicell@gmail.com
 [branch]
     autosetupmerge = true
-[color]
-    ui = auto
 [core]
     ;  autocrlf = true
     ;  autocrlf = input
