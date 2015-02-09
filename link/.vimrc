@@ -54,6 +54,8 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'scrooloose/syntastic'
 " Go
 Bundle 'fatih/vim-go'
+" Salt
+Bundle 'saltstack/salt-vim'
 
 " Alternate Files quickly (.c --> .h etc)
 " Bundle 'a.vim'
