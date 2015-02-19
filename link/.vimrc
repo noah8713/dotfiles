@@ -56,6 +56,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'fatih/vim-go'
 " Salt
 Bundle 'saltstack/salt-vim'
+" Jinja2
+Bundle "Glench/Vim-Jinja2-Syntax"
 
 " Alternate Files quickly (.c --> .h etc)
 " Bundle 'a.vim'
