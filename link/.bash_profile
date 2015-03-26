@@ -33,3 +33,7 @@ echo -e "Machine stats"; uptime
 procinfo|head -n 13|tail -n 11
 
 export GREP_OPTIONS=--exclude-dir='.svn'
+
+export GOROOT=$HOME/go
+export GOPATH=~/gocode
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
