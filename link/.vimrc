@@ -21,7 +21,9 @@ Bundle 'cppcomplete'
 " Bundle 'SuperTab-continued.'
 Bundle 'ervandew/supertab'
 " comment lines in a program
-Bundle 'EnhCommentify.vim'
+" Bundle 'EnhCommentify.vim'
+" Vim plugin for intensely orgasmic commenting
+Bundle 'scrooloose/nerdcommenter'
 " extended % matching for HTML, LaTeX, and many other languages
 Bundle 'matchit.zip'
 " cscope keyboard mappings for VIM
