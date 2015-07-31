@@ -5,8 +5,10 @@ bindkey "^[[18~" copy    # F7 = copy/scroll back mode
 
 #  screen -t irssi irssi
 
-#  bind j focus down
-#  bind k focus up
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
 
 #  defscrollback 2000
 defutf8 on
