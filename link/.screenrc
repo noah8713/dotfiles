@@ -2,6 +2,7 @@ bindkey "^[OQ" screen    # F2 = new window
 bindkey "^[OR" prev      # F3 = prev
 bindkey "^[OS" next      # F4 = next
 bindkey "^[[18~" copy    # F7 = copy/scroll back mode
+bindkey "^[[17~" eval "command -c rsz" # F6 = enter resize mode
 
 #  screen -t irssi irssi
 
@@ -26,3 +27,8 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 
 #  bindkey "^[Od" prev  # change window with ctrl-left
 #  bindkey "^[Oc" next  # change window with ctrl-righ
+
+bind -c rsz h eval "resize -h -5" "command -c rsz"
+bind -c rsz j eval "resize -v +5" "command -c rsz"
+bind -c rsz k eval "resize -v -5" "command -c rsz"
+bind -c rsz l eval "resize -h +5" "command -c rsz"
