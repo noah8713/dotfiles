@@ -255,9 +255,17 @@ nnoremap <silent> <leader>n <Esc><Esc>:call Toggle_Number()<CR>
 nnoremap <silent> <leader>t <Esc><Esc>:Tlist<CR>
 nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>, <Esc><Esc>:call Toggle_Wrap()<CR>
+
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
-nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 100)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 1/100)<CR>
+nnoremap <silent> <Leader>= :wincmd _<CR>
+nmap <C-j> :wincmd j<CR>
+nmap <C-k> :wincmd k<CR>
+nmap <C-h> :wincmd h<CR>
+nmap <C-k> :wincmd k<CR>
+nmap <C-w><Left> :tabp<CR>
+nmap <C-w><Right> :tabn<CR>
+" set winminheight=0
 
 " noremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 " inoremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
@@ -275,8 +283,6 @@ map <Right> zl
 map <Left> zh
 map <Down> <C-e>
 map <Up> <C-y>
-nmap <C-w><Left> :tabp<CR>
-nmap <C-w><Right> :tabn<CR>
 
 " highlight WhitespaceEOL ctermbg=red guibg=red
 " match WhitespaceEOL /\s\+$/
