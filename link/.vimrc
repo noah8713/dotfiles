@@ -9,10 +9,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugin
-Bundle 'winmanager'
+Bundle 'unicell/winmanager'
 Bundle 'bufexplorer.zip'
 " A tree explorer plugin for navigating the filesystem
-" Bundle 'The-NERD-tree'
+Bundle 'The-NERD-tree'
 " C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
 Bundle 'c.vim'
 " C/C++ and Java code completion
@@ -124,22 +124,23 @@ function Toggle_WinManager()
     endif
 endfunction
 
-" let NERDTreeIgnore = ['\.o$', '^cscope', 'tags']
+let NERDTreeIgnore = ['\.o$', '^cscope', 'tags']
 
-" let g:NERDTree_title="[NERDTree]"
+let g:NERDTree_title="[NERDTree]"
 " let g:winManagerWindowLayout="NERDTree|BufExplorer,TagList"
 " let g:winManagerWindowLayout="TagList,BufExplorer"
+let g:winManagerWindowLayout="NERDTree|BufExplorer"
 
-" function! NERDTree_Start()
-    " exec 'NERDTree'
-    " if !exists("s:std_in") && 0 == argc()
-        " NERDTree
-    " end
-" endfunction
+function! NERDTree_Start()
+    exec 'NERDTree'
+    if !exists("s:std_in") && 0 == argc()
+        NERDTree
+    end
+endfunction
 
-" function! NERDTree_IsValid()
-    " return 1
-" endfunction
+function! NERDTree_IsValid()
+    return 1
+endfunction
 
 let tlist_make_settings  = 'make;m:makros;t:targets'
 let tlist_qmake_settings = 'qmake;t:SystemVariables'
