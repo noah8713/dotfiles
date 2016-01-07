@@ -255,6 +255,9 @@ nnoremap <silent> <leader>n <Esc><Esc>:call Toggle_Number()<CR>
 nnoremap <silent> <leader>t <Esc><Esc>:Tlist<CR>
 nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>, <Esc><Esc>:call Toggle_Wrap()<CR>
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
+nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 100)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 1/100)<CR>
 
 " noremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 " inoremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
