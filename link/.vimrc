@@ -265,7 +265,9 @@ nmap <C-h> :wincmd h<CR>
 nmap <C-k> :wincmd k<CR>
 nmap <C-w><Left> :tabp<CR>
 nmap <C-w><Right> :tabn<CR>
+
 " set winminheight=0
+set noea
 
 " noremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 " inoremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
