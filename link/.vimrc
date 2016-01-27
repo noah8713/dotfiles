@@ -262,7 +262,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 1/100)<CR>
 nmap <C-j> :wincmd j<CR>
 nmap <C-k> :wincmd k<CR>
 nmap <C-h> :wincmd h<CR>
-nmap <C-k> :wincmd k<CR>
+nmap <C-l> :wincmd l<CR>
 nmap <C-w><Left> :tabp<CR>
 nmap <C-w><Right> :tabn<CR>
 
