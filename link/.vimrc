@@ -30,6 +30,8 @@ Bundle 'matchit.zip'
 Bundle 'chazy/cscope_maps'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 Bundle 'taglist.vim'
+" Class outline viewer
+Bundle 'majutsushi/tagbar'
 " The ultimate statusline/prompt utility.
 Bundle 'Lokaltog/powerline'
 
@@ -130,6 +132,10 @@ let g:NERDTree_title="[NERDTree]"
 " let g:winManagerWindowLayout="NERDTree|BufExplorer,TagList"
 " let g:winManagerWindowLayout="TagList,BufExplorer"
 let g:winManagerWindowLayout="NERDTree|BufExplorer"
+
+let g:tagbar_left=1
+let g:tagbar_foldlevel = 2
+let g:tagbar_zoomwidth = 0
 
 function! NERDTree_Start()
     exec 'NERDTree'
@@ -253,6 +259,7 @@ let mapleader=","
 nnoremap <silent> <leader>l <Esc><Esc>:call Toggle_List()<CR>
 nnoremap <silent> <leader>n <Esc><Esc>:call Toggle_Number()<CR>
 nnoremap <silent> <leader>t <Esc><Esc>:Tlist<CR>
+nnoremap <silent> <leader>b <Esc><Esc>:TagbarToggle<CR>
 nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>r <Esc><Esc>:call Toggle_Wrap()<CR>
 nnoremap <silent> <Leader>, :wincmd _<CR>
@@ -302,6 +309,10 @@ if $ANDROID_BUILD_TOP != ""
         se expandtab
     endif
 endif
+
+let g:syntastic_check_on_open = 1
+"let g:go_fmt_command = "goimports"
+"let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
