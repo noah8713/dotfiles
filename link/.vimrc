@@ -126,7 +126,7 @@ function Toggle_WinManager()
     endif
 endfunction
 
-let NERDTreeIgnore = ['\.o$', '^cscope', 'tags']
+let NERDTreeIgnore = ['\.o$', '\.pyc$', '^cscope', 'tags']
 
 let g:NERDTree_title="[NERDTree]"
 " let g:winManagerWindowLayout="NERDTree|BufExplorer,TagList"
@@ -262,10 +262,12 @@ nnoremap <silent> <leader>t <Esc><Esc>:Tlist<CR>
 nnoremap <silent> <leader>b <Esc><Esc>:TagbarToggle<CR>
 nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>r <Esc><Esc>:call Toggle_Wrap()<CR>
+
 nnoremap <silent> <Leader>, :wincmd _<CR>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 1/100)<CR>
 :nnoremap <silent> <Leader><Leader> :wincmd _<CR>
+
 nmap <C-j> :wincmd j<CR>
 nmap <C-k> :wincmd k<CR>
 nmap <C-h> :wincmd h<CR>
