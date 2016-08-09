@@ -13,6 +13,8 @@ Bundle 'unicell/winmanager'
 Bundle 'bufexplorer.zip'
 " A tree explorer plugin for navigating the filesystem
 Bundle 'The-NERD-tree'
+" Fast file navigation for VIM
+Bundle 'wincent/command-t'
 " C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
 Bundle 'c.vim'
 " C/C++ and Java code completion
@@ -262,6 +264,8 @@ nnoremap <silent> <leader>t <Esc><Esc>:Tlist<CR>
 nnoremap <silent> <leader>b <Esc><Esc>:TagbarToggle<CR>
 nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>r <Esc><Esc>:call Toggle_Wrap()<CR>
+
+nnoremap <silent> <Leader>f <Esc><Esc>:CommandT<CR>
 
 nnoremap <silent> <Leader>, :wincmd _<CR>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
