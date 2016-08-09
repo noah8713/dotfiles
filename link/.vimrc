@@ -317,8 +317,15 @@ if $ANDROID_BUILD_TOP != ""
 endif
 
 let g:syntastic_check_on_open = 1
-"let g:go_fmt_command = "goimports"
-"let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
