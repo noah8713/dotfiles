@@ -39,7 +39,7 @@ packages=(
     libc6-dev build-essential libssl-dev
     proxychains socat screen byobu
     git-core stgit tig
-    vim cscope exuberant-ctags
+    vim vim-nox cscope exuberant-ctags
     python-virtualenv python-pip python-dev
     dnsutils jnettop lrzsz
     tree
