@@ -140,10 +140,22 @@ bind -m vi-insert "\C-a.":beginning-of-line
 bind -m vi-insert "\C-e.":end-of-line
 bind -m vi-insert "\C-w.":backward-kill-word
 
-alias uni-grep='grep -nHr --exclude-dir="tests" --exclude-dir="locale" --exclude="cscope*"'
+# disable flow control to avoid conflict with command-t
+stty -ixon -ixoff
+
+alias uni-grep='grep -nHr --exclude-dir="tests" --exclude-dir="locale" --exclude-dir="venv" --exclude="cscope*"'
 
 if [ "$VIRTUAL_ENV" ]; then 
     source $VIRTUAL_ENV/bin/activate; 
+fi
+
+function sssh() { sg socksified -c "ssh $@" ;}
+
+if [ -f ~/google-cloud-sdk/path.bash.inc ]; then
+    source '/home/stack/google-cloud-sdk/path.bash.inc'
+fi
+if [ -f ~/google-cloud-sdk/completion.bash.inc ]; then
+    source '/home/stack/google-cloud-sdk/completion.bash.inc'
 fi
 
 # Source all files in ~/.dotfiles/source/
