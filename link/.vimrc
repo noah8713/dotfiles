@@ -266,6 +266,7 @@ nnoremap <silent> <leader>w <Esc><Esc>:call Toggle_WinManager()<CR>
 nnoremap <silent> <leader>r <Esc><Esc>:call Toggle_Wrap()<CR>
 
 nnoremap <silent> <Leader>f <Esc><Esc>:CommandT<CR>
+nnoremap <silent> <Leader>c <Esc><Esc>:SyntasticCheck<CR>
 
 nnoremap <silent> <Leader>, :wincmd _<CR>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
@@ -319,13 +320,15 @@ endif
 let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_always_populate_loc_list = 1
+
+let g:go_list_type = "quickfix"
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
