@@ -273,6 +273,8 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 100)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 1/100)<CR>
 :nnoremap <silent> <Leader><Leader> :wincmd _<CR>
 
+let g:C_Ctrl_j='off'
+
 nmap <C-j> :wincmd j<CR>
 nmap <C-k> :wincmd k<CR>
 nmap <C-h> :wincmd h<CR>
