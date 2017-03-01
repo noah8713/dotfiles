@@ -319,6 +319,13 @@ if $ANDROID_BUILD_TOP != ""
     endif
 endif
 
+if $KERNEL_SRC_PATH != "" && $PWD =~ $KERNEL_SRC_PATH
+    se tabstop=8
+    set softtabstop=8
+    se shiftwidth=8
+    se noexpandtab
+endif
+
 let g:C_Ctrl_j   = 'off'
 
 let g:syntastic_check_on_open = 1
