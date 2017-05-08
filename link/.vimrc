@@ -36,6 +36,8 @@ Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 " The ultimate statusline/prompt utility.
 Bundle 'Lokaltog/powerline'
+" Seamless navigation between tmux panes and vim splits
+" Bundle 'christoomey/vim-tmux-navigator'
 
 " A set of menus/shortcuts to work with Python files
 Bundle 'python.vim'
